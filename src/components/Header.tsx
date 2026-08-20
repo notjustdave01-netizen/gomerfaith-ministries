@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'About Us', href: '/#welcome-home' },
-  { label: 'Ministries', href: '/#next-steps' },
+  { label: 'Ministries', href: '/ministries' },
   { label: 'Grow', href: '/grow' },
   { label: 'Events', href: '/#events' },
   { label: 'Watch', href: '/#anchor' },

@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { Facebook, Instagram, Phone, Youtube } from 'lucide-react'
 
 const QUICK_LINKS = [
-  { label: 'About Us', href: '#welcome-home' },
-  { label: 'Events', href: '#events' },
-  { label: 'Watch', href: '#anchor' },
-  { label: 'Giving', href: '#give' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/#welcome-home' },
+  { label: 'Ministries', href: '/ministries' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Watch', href: '/#anchor' },
+  { label: 'Giving', href: '/#give' },
 ]
 
 function encode(data: Record<string, string>) {
