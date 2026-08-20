@@ -4,8 +4,8 @@ export function WelcomeHome() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
         <div className="order-2 aspect-[4/5] overflow-hidden rounded-xl lg:order-1">
           <img
-            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1000&q=80"
-            alt="Pastor Michael A Lewis and Elder Pauline Lewis greeting members"
+            src="/gomer-faith-congregation.jpg"
+            alt="Congregation worshipping together"
             className="h-full w-full object-cover"
           />
         </div>
@@ -33,3 +33,4 @@ export function WelcomeHome() {
     </section>
   )
 }
+
