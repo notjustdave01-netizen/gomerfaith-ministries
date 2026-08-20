@@ -96,18 +96,18 @@ export function Footer() {
               Visit Us
             </h3>
             <address className="mt-5 max-w-xs text-sm not-italic leading-relaxed text-white/75">
-              Ground Floor, Destiny House
+              Ground Floor
               <br />
               31 Dunton Road
               <br />
               Leyton, London, E10 7AF
             </address>
             <a
-              href="tel:+442086987421"
+              href="tel:0794456800"
               className="mt-4 flex items-center gap-2 text-sm text-white/75 hover:text-white"
             >
               <Phone size={15} />
-              +44 20 8698 7421
+              0794456800
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ const EVENTS = [
     day: '16',
     month: 'AUG',
     title: 'Sunday Worship',
-    time: '10:30 AM – 12:30 PM',
+    time: '1:00 PM – 2:30 PM',
     location: 'Destiny House, Main Hall',
   },
   {

@@ -49,7 +49,7 @@ export function Hero() {
             <Clock size={20} className="shrink-0 text-white/60" />
             <div>
               <p className="text-xs uppercase tracking-wide text-white/60">Sunday Service</p>
-              <p className="text-sm font-semibold">1:00 PM</p>
+              <p className="text-sm font-semibold">1:00 PM – 2:30 PM</p>
             </div>
           </div>
           <div className="flex items-center gap-3 py-3 sm:py-0 sm:px-8">
