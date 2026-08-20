@@ -4,7 +4,7 @@ const EVENTS = [
     days: 'OCT',
     title: 'Family Focus',
     theme: "Trusting God's plans for your family",
-    time: '6:30 PM – 8:00 PM',
+    time: '1:00 PM – 2:30 PM',
   },
   {
     month: 'Every',
