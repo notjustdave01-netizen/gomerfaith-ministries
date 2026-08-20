@@ -9,7 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as GrowRouteImport } from './routes/grow'
 import { Route as IndexRouteImport } from './routes/index'
+
+const GrowRoute = GrowRouteImport.update({
+  id: '/grow',
+  path: '/grow',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -19,23 +26,27 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/grow': typeof GrowRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/grow': typeof GrowRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/grow': typeof GrowRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/grow'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/grow'
+  id: '__root__' | '/' | '/grow'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  GrowRoute: typeof GrowRoute
   IndexRoute: typeof IndexRoute
 }
 
@@ -48,10 +59,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/grow': {
+      id: '/grow'
+      path: '/grow'
+      fullPath: '/grow'
+      preLoaderRoute: typeof GrowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  GrowRoute: GrowRoute,
   IndexRoute: IndexRoute,
 }
 export const routeTree = rootRouteImport
