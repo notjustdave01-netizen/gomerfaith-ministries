@@ -1,26 +1,22 @@
-import { MapPin } from 'lucide-react'
-
 const EVENTS = [
   {
-    day: '14',
-    month: 'AUG',
+    month: 'OCT',
+    days: '4 · 11 · 18 · 25',
     title: 'Family Focus',
+    theme: "Trusting God's plans for your family",
     time: '6:30 PM – 8:00 PM',
-    location: 'Destiny House, Main Hall',
   },
   {
-    day: '16',
-    month: 'AUG',
+    month: 'Every',
+    days: 'SUN',
     title: 'Sunday Worship',
     time: '1:00 PM – 2:30 PM',
-    location: 'Destiny House, Main Hall',
   },
   {
-    day: '22',
-    month: 'AUG',
+    month: 'SEP',
+    days: '1 – 3',
     title: 'Prayer & Fasting Watch',
-    time: '7:00 PM – 9:00 PM',
-    location: 'Destiny House, Upper Room',
+    time: '6:00 AM – 4:00 PM',
   },
 ]
 
@@ -38,19 +34,20 @@ export function Events() {
               key={event.title}
               className="flex gap-5 rounded-xl border border-black/8 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-[6px] bg-[#111111] text-white">
+              <div className="flex h-16 min-w-16 shrink-0 flex-col items-center justify-center rounded-[6px] bg-[#111111] px-3 text-white">
                 <span className="text-xs font-semibold uppercase tracking-wide text-white/60">
                   {event.month}
                 </span>
-                <span className="font-display text-xl font-bold leading-none">{event.day}</span>
+                <span className="whitespace-nowrap font-display text-xl font-bold leading-none">
+                  {event.days}
+                </span>
               </div>
               <div>
                 <h3 className="font-display text-lg font-bold text-[#111111]">{event.title}</h3>
+                {event.theme ? (
+                  <p className="mt-1 text-sm font-medium text-[#a01c2b]">{event.theme}</p>
+                ) : null}
                 <p className="mt-1 text-sm text-[#111111]/60">{event.time}</p>
-                <p className="mt-2 flex items-center gap-1.5 text-sm text-[#111111]/60">
-                  <MapPin size={14} />
-                  {event.location}
-                </p>
               </div>
             </div>
           ))}
