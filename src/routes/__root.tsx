@@ -13,12 +13,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Under Maintenance | Gomer Faith Ministries',
+        title: 'Gomer Faith Ministries | Leyton, London',
       },
       {
         name: 'description',
         content:
-          'Gomer Faith Ministries is currently updating its website. Please check back soon.',
+          'Gomer Faith Ministries in Leyton, London — restoring families and changing lives through faith, community, and purpose.',
       },
       {
         property: 'og:image',
@@ -73,4 +73,3 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     </html>
   )
 }
-
