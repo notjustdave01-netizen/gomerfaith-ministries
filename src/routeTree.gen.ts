@@ -9,8 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as MinistriesRouteImport } from './routes/ministries'
 import { Route as GrowRouteImport } from './routes/grow'
 import { Route as IndexRouteImport } from './routes/index'
+
+const MinistriesRoute = MinistriesRouteImport.update({
+  id: '/ministries',
+  path: '/ministries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 const GrowRoute = GrowRouteImport.update({
   id: '/grow',
@@ -27,27 +34,31 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/grow': typeof GrowRoute
+  '/ministries': typeof MinistriesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/grow': typeof GrowRoute
+  '/ministries': typeof MinistriesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/grow': typeof GrowRoute
+  '/ministries': typeof MinistriesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/grow'
+  fullPaths: '/' | '/grow' | '/ministries'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/grow'
-  id: '__root__' | '/' | '/grow'
+  to: '/' | '/grow' | '/ministries'
+  id: '__root__' | '/' | '/grow' | '/ministries'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   GrowRoute: typeof GrowRoute
   IndexRoute: typeof IndexRoute
+  MinistriesRoute: typeof MinistriesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -66,12 +77,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GrowRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ministries': {
+      id: '/ministries'
+      path: '/ministries'
+      fullPath: '/ministries'
+      preLoaderRoute: typeof MinistriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   GrowRoute: GrowRoute,
   IndexRoute: IndexRoute,
+  MinistriesRoute: MinistriesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
