@@ -48,15 +48,15 @@ export function Hero() {
           <div className="flex items-center gap-3 py-3 sm:py-0 sm:pr-8">
             <Clock size={20} className="shrink-0 text-white/60" />
             <div>
-              <p className="text-xs uppercase tracking-wide text-white/60">Sunday School</p>
-              <p className="text-sm font-semibold">9:15 AM</p>
+              <p className="text-xs uppercase tracking-wide text-white/60">Sunday Service</p>
+              <p className="text-sm font-semibold">1:00 PM</p>
             </div>
           </div>
           <div className="flex items-center gap-3 py-3 sm:py-0 sm:px-8">
             <Clock size={20} className="shrink-0 text-white/60" />
             <div>
-              <p className="text-xs uppercase tracking-wide text-white/60">Weekly Ministry</p>
-              <p className="text-sm font-semibold">Sundays, 10:30 AM &amp; Wednesdays, 7:00 PM</p>
+              <p className="text-xs uppercase tracking-wide text-white/60">Midweek Service - Prayer Meeting & Bible Study</p>
+              <p className="text-sm font-semibold">7:30 PM – 8:30 PM</p>
             </div>
           </div>
           <div className="flex items-center gap-3 py-3 sm:py-0 sm:pl-8">
