@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'About Us', href: '#welcome-home' },
-  { label: 'Ministries', href: '#next-steps' },
-  { label: 'Events', href: '#events' },
-  { label: 'Watch', href: '#anchor' },
+  { label: 'About Us', href: '/#welcome-home' },
+  { label: 'Ministries', href: '/#next-steps' },
+  { label: 'Grow', href: '/grow' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Watch', href: '/#anchor' },
 ]
 
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="rounded-[8px] bg-white px-3 py-1.5 shadow-sm">
+        <a href="/" className="rounded-[8px] bg-white px-3 py-1.5 shadow-sm">
           <img src="/logo.png" alt="Gomer Faith Ministries" className="h-9 w-auto lg:h-11" />
         </a>
 
@@ -48,7 +49,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="#visit"
+            href="/#visit"
             className={`rounded-[6px] border px-5 py-2.5 text-sm font-semibold transition-all ${
               scrolled
                 ? 'border-[#111111]/25 text-[#111111] hover:border-[#111111] hover:bg-[#111111] hover:text-white'
@@ -58,7 +59,7 @@ export function Header() {
             Plan Your Visit
           </a>
           <a
-            href="#give"
+            href="/#give"
             className="rounded-[6px] bg-[#a01c2b] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#7f1521] hover:shadow-md"
           >
             Give
@@ -91,14 +92,14 @@ export function Header() {
           </nav>
           <div className="mt-3 flex flex-col gap-3">
             <a
-              href="#visit"
+              href="/#visit"
               onClick={() => setMenuOpen(false)}
               className="rounded-[6px] border border-[#111111]/25 px-5 py-3 text-center text-sm font-semibold text-[#111111]"
             >
               Plan Your Visit
             </a>
             <a
-              href="#give"
+              href="/#give"
               onClick={() => setMenuOpen(false)}
               className="rounded-[6px] bg-[#a01c2b] px-5 py-3 text-center text-sm font-semibold text-white"
             >
