@@ -1,7 +1,7 @@
 const EVENTS = [
   {
-    month: 'OCT',
-    days: '4 · 11 · 18 · 25',
+    month: '',
+    days: 'OCT',
     title: 'Family Focus',
     theme: "Trusting God's plans for your family",
     time: '6:30 PM – 8:00 PM',
@@ -15,7 +15,8 @@ const EVENTS = [
   {
     month: 'SEP',
     days: '1 – 3',
-    title: 'Prayer & Fasting Watch',
+    title: 'Prayer & Fasting',
+    theme: 'Pure Intent',
     time: '6:00 AM – 4:00 PM',
   },
 ]
