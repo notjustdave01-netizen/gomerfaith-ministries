@@ -6,21 +6,21 @@ const EVENTS = [
     month: 'AUG',
     title: 'Family Focus',
     time: '6:30 PM – 8:00 PM',
-    location: 'Destiny House, Main Hall',
+    location: 'Ground Floor, 31 Dunton Road, Leyton, London, E10 7AF',
   },
   {
     day: '16',
     month: 'AUG',
     title: 'Sunday Worship',
-    time: '10:30 AM – 12:30 PM',
-    location: 'Destiny House, Main Hall',
+    time: '1:00 PM – 2:30 PM',
+    location: 'Ground Floor, 31 Dunton Road, Leyton, London, E10 7AF',
   },
   {
     day: '22',
     month: 'AUG',
     title: 'Prayer & Fasting Watch',
     time: '7:00 PM – 9:00 PM',
-    location: 'Destiny House, Upper Room',
+    location: 'Ground Floor, 31 Dunton Road, Leyton, London, E10 7AF',
   },
 ]
 
