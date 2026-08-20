@@ -22,11 +22,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={\`fixed inset-x-0 top-0 z-50 transition-all duration-300 \${
         scrolled || menuOpen
           ? 'bg-white/95 backdrop-blur-sm shadow-[0_1px_0_rgba(0,0,0,0.06)]'
           : 'bg-gradient-to-b from-black/50 to-transparent'
-      }`}
+      }\`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="/" className="rounded-[8px] bg-white px-3 py-1.5 shadow-sm">
@@ -38,9 +38,9 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-[15px] font-medium transition-colors ${
+              className={\`text-[15px] font-medium transition-colors \${
                 scrolled ? 'text-[#111111]/80 hover:text-[#a01c2b]' : 'text-white/90 hover:text-white'
-              }`}
+              }\`}
             >
               {link.label}
             </a>
@@ -50,11 +50,11 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="/#visit"
-            className={`rounded-[6px] border px-5 py-2.5 text-sm font-semibold transition-all ${
+            className={\`rounded-[6px] border px-5 py-2.5 text-sm font-semibold transition-all \${
               scrolled
                 ? 'border-[#111111]/25 text-[#111111] hover:border-[#111111] hover:bg-[#111111] hover:text-white'
                 : 'border-white/70 text-white hover:bg-white hover:text-[#111111]'
-            }`}
+            }\`}
           >
             Plan Your Visit
           </a>
@@ -70,7 +70,7 @@ export function Header() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className={`lg:hidden ${scrolled || menuOpen ? 'text-[#111111]' : 'text-white'}`}
+          className={\`lg:hidden \${scrolled || menuOpen ? 'text-[#111111]' : 'text-white'}\`}
         >
           {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
