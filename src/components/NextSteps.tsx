@@ -25,7 +25,7 @@ const STEPS = [
     subtext: 'Next generation leaders.',
     href: '#youth',
     image:
-      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1592327614130-8bfda22f0bf7?auto=format&fit=crop&w=800&q=80',
   },
 ]
 
