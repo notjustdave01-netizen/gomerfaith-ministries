@@ -41,3 +41,48 @@ html {
 .animate-fade-up {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+.maintenance-grid {
+  background-image:
+    linear-gradient(rgba(23, 21, 18, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 21, 18, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to right, black 0%, transparent 78%);
+}
+
+@keyframes maintenance-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.maintenance-reveal {
+  animation: maintenance-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.maintenance-delay-1 {
+  animation-delay: 120ms;
+}
+
+.maintenance-delay-2 {
+  animation-delay: 220ms;
+}
+
+.maintenance-delay-3 {
+  animation-delay: 360ms;
+}
+
+.maintenance-delay-4 {
+  animation-delay: 500ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maintenance-reveal {
+    animation: none;
+  }
+}

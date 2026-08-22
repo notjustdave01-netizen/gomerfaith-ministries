@@ -1,4 +1,5 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { MaintenancePage } from '@/components/MaintenancePage'
 
 import '../styles.css'
 
@@ -13,12 +14,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Gomer Faith Ministries | Leyton, London',
+        title: 'Website Under Maintenance | Gomer Faith Ministries',
       },
       {
         name: 'description',
         content:
-          'Gomer Faith Ministries in Leyton, London — restoring families and changing lives through faith, community, and purpose.',
+          'The Gomer Faith Ministries website is temporarily under maintenance. We will be back online soon.',
       },
       {
         property: 'og:image',
@@ -60,14 +61,14 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument() {
   return (
     <html lang="en">
       <head>
         <HeadContent />
       </head>
       <body>
-        {children}
+        <MaintenancePage />
         <Scripts />
       </body>
     </html>
