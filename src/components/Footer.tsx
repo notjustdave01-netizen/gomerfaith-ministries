@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Facebook, Instagram, Phone, Youtube } from 'lucide-react'
+import { Facebook, Instagram, Mail, Phone, Youtube } from 'lucide-react'
+
+import { CONTACT_EMAIL } from '@/constants'
 
 const QUICK_LINKS = [
   { label: 'About Us', href: '/#welcome-home' },
@@ -108,6 +110,13 @@ export function Footer() {
             >
               <Phone size={15} />
               0794456800
+            </a>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-3 flex items-center gap-2 text-sm text-white/75 hover:text-white"
+            >
+              <Mail size={15} />
+              {CONTACT_EMAIL}
             </a>
           </div>
         </div>
