@@ -5,6 +5,7 @@ import { AnchorMedia } from '@/components/AnchorMedia'
 import { WelcomeHome } from '@/components/WelcomeHome'
 import { NextSteps } from '@/components/NextSteps'
 import { Events } from '@/components/Events'
+import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
 export const Route = createFileRoute('/')({
@@ -21,6 +22,7 @@ function HomePage() {
         <WelcomeHome />
         <NextSteps />
         <Events />
+        <Contact />
       </main>
       <Footer />
     </div>
